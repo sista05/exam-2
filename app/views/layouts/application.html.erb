@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exam2</title>
+  <title>giltystagram</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<header>
+  
+  <ul>
+    <li><%= link_to "ホーム", root_path , class: 'glyphicon glyphicon-home'%></li>
+    <li><%= link_to "通知", root_path , class: 'glyphicon glyphicon-bell'%></li>
+    <li><%= link_to "写真", pics_path , class: 'glyphicon glyphicon-envelope'%></li>
+    
+    <% if user_signed_in? %>
+    <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+    <li><%= link_to 'ログイン', new_user_session_path  %></li>
+    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+    <% end %>
+  </ul>
+</header>
+
 <%= yield %>
 
-</body>
+<footer>
+  <p>運営会社トリックマーケット</p>
+  <p>(c) 2017 Copyright Trick Market</Marc>.</p>
+</footer>
+
+
 </html>

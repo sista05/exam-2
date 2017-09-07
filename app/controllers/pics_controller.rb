@@ -4,13 +4,14 @@ class PicsController < ApplicationController
   def index
     @pics = Pic.all
   end
-  def confirm
-    @pic = Pic.new(pics_params)
-    render :new if @pic.invalid?
-  end
+  
+  #def confirm
+  #  @pic = Pic.new(pics_params)
+  #  render :new if @pic.invalid?
+  #end
 
   def new
-    #@pic = Pic.new
+
     if params[:back]
       @pic = Pic.new(pics_params)
     else
@@ -30,11 +31,10 @@ class PicsController < ApplicationController
   end
 
   def edit
-    #@pic = Pic.find(params[:id])
+
   end
 
   def update
-    #@pic = Pic.find(params[:id])
 
     if @pic.update(pics_params)
       redirect_to pics_path, notice: "ブログを更新しました!"
@@ -44,7 +44,7 @@ class PicsController < ApplicationController
   end
 
   def destroy
-    #@pic = Pic.find(params[:id])
+
     @pic.destroy
     redirect_to pics_path, notice: "ブログを削除しました!"
   end

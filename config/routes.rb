@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :pics, only: [:index, :new, :create, :edit, :update]
+
+  devise_for :users
+  resources :pics, only: [:index, :new, :create, :edit, :update, :destroy]
 
   get 'pics' => 'pics#index'
 
@@ -57,4 +59,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  root 'top#index'
 end
