@@ -47,3 +47,12 @@ end
 
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'rails_admin'
+gem 'cancan'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+gem 'carrierwave'
+gem 'mini_magick'
