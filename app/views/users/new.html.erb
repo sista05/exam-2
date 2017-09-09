@@ -1,0 +1,38 @@
+<h1>ユーザ登録</h1>
+
+<% if @user.errors.any? %>
+  The form contains <%= pluralize(@user.errors.count, "error") %>.
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+<% end %>
+
+<%= form_for(@user) do |f| %>
+  <div class="field">
+<%= f.label :name %>
+    
+    <%= f.text_field :name, class: 'form-control' %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %> 
+  </div>
+<br><br>
+  <div class="action">
+    <%= f.submit "登録する", class: 'btn btn-primary btn-block' %>
+  </div>
+<% end %>
+
+<br>
+<%= link_to '戻る', root_path %>
