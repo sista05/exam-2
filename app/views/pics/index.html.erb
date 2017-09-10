@@ -2,7 +2,7 @@
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
     <p><%= notice %></p>
     <h1>ブログ一覧</h1>
-    <%= link_to "ブログを作成する", new_pic_path, class: 'btn btn-default' %>
+    <%= link_to "投稿する", new_pic_path, class: 'btn btn-default' %>
     
     <div id="pic-page-top-btn" class="pic-page-top-btn">
       <p><a class="move-page-top" id="move-page-top">▲</a></p>
@@ -10,8 +10,7 @@
     <% @pics.each do |pic| %>
     <div class="row">
       <h4><strong><%= pic.title %></strong></h4>
-      <h5><p><%= pic.user.name%></p></h5>
-      <%= profile_img(pic.user) %>
+      <h5><p><%= image_tag pic.image%></p></h5>
       <h5><p><%= pic.content %></p></h5>
       <%= link_to "編集", edit_pic_path(pic.id), class: 'btn btn-primary btn-success' %>
       <%= link_to "削除", pic_path(pic.id), method: :delete, class:'btn btn-primary btn-success' %>
