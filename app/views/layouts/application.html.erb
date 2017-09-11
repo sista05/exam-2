@@ -10,19 +10,8 @@
 <body>
 
 <header>
-  
   <ul>
-    <li><%= link_to "ホーム", root_path , class: 'glyphicon glyphicon-home'%></li>
-    <li><%= link_to "通知", root_path , class: 'glyphicon glyphicon-bell'%></li>
-    <li><%= link_to "写真", pics_path , class: 'glyphicon glyphicon-envelope'%></li>
-    
-    <% if user_signed_in? %>
-    <li><%= link_to 'マイページ', edit_user_registration_path %></li>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-    <% else %>
-    <li><%= link_to 'ログイン', new_user_session_path  %></li>
-    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-    <% end %>
+    <h3><li><%= link_to "Futurestagram", root_path %></li></h3>
   </ul>
 </header>
 
@@ -30,7 +19,7 @@
 
 <footer>
   <p>運営会社トリックマーケット</p>
-  <p>(c) 2017 Copyright Trick Market</Marc>.</p>
+  <p>(c) 2117 Copyright Trick Market</Marc>.</p>
 </footer>
 
 

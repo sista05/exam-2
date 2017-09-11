@@ -1,15 +1,8 @@
+<br><br><br><br>
+<% @pics.each do |pic| %>
 <div class="container">
-  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-    <p><%= notice %></p>
-    <h1>ブログ一覧</h1>
-    <%= link_to "投稿する", new_pic_path, class: 'btn btn-default' %>
-    
-    <div id="pic-page-top-btn" class="pic-page-top-btn">
-      <p><a class="move-page-top" id="move-page-top">▲</a></p>
-    </div>
-    <% @pics.each do |pic| %>
-    <div class="row">
-      <h4><strong><%= pic.title %></strong></h4>
+  <div class="row">
+    <div class="wrapper col-xs-6 col-sm-4 col-md-4">
       <h5><p><%= image_tag pic.image%></p></h5>
       <h5><p><%= pic.content %></p></h5>
       <%= link_to "編集", edit_pic_path(pic.id), class: 'btn btn-primary btn-success' %>
@@ -17,4 +10,11 @@
     </div>
     <% end %>
   </div>
+  <p><%= notice %></p>
+  <%= link_to "投稿する", new_pic_path, class: 'btn btn-default' %>
 </div>
+
+      
+      
+
+

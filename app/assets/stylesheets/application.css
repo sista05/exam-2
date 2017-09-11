@@ -18,7 +18,7 @@
 header {
   width: 100%;
   background-color: white;
-  height: 54px;
+  height: 70px;
   position: fixed; 
   z-index: 10;
 }
@@ -32,11 +32,11 @@ header ul a {
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: #33b8ff;
+    color: gray;
 }
 
 header li {
-    float: right;
+    float: left;
     width: auto;
     letter-spacing: normal;
 }
@@ -47,17 +47,21 @@ header ul:after {
 
 }
 
-#tweet_text {
-    background: #fff;
+tweet_text {
+    background: white;
     border-radius: 4px;
+    width: 150%;
+        color: gray;
 }
+
 
 .tweets {
     border-bottom: 1px solid #ccc;
-    background: #fff;
+    background: white;
     padding: 30px;
     text-align: left;
     word-wrap: break-word;
+    color: gray;
 }
 
 /*
@@ -77,9 +81,9 @@ header ul:after {
 
 footer {
     width: 100%;
-    background-color: #33b8ff;
+    background-color: white;
     padding: 20px 0 10px 0;
-    color: white;
+    color: gray;
     margin: auto;
     font-size: 12px;
     position: fixed;

@@ -57,6 +57,7 @@
     background-size: cover;
     background-image: url("header.jpg");
     background-attachment: fixed;
+    
 }
 
 .main-header img {
@@ -152,6 +153,7 @@ footer {
     font-size: 12px;
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 
 html {
@@ -161,6 +163,8 @@ html {
 
 body {
     text-align: center;
+    background: #FAFAFA;
+    color: gray;
 }
 
 li {

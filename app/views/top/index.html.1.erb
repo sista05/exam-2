@@ -9,29 +9,11 @@
 </head>
 <body>
 
-<div class="col-sm-8" id="tweet_text">
+<br><br><br><br><br><br><br><br>
+<section class="main-header">
   <p class="flash"><%= notice %><%= alert %></p>
-  <img src="<%= asset_path "image.jpg" %> "width=150%>
- </div>
- 
- <br> <br> <br> <br> <br> <br> <br> <br>
-    <div class="wrapper col-sm-4" id="tweets">
-     <% if user_signed_in? %>
-     <br> <br>
-    <li><%= link_to 'マイページ', edit_user_registration_path %></li>
-    <br>
-    <li><%= link_to "投稿写真", pics_path , class: 'glyphicon glyphicon-camera' %></li>
-    <br>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-    <br> <br>
-    <% else %>
-    <br> <br>
-    <li><%= link_to 'ログイン', new_user_session_path  %></li>
-    <br>
-    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-    <br> <br> 
-    <% end %>
- </div>
+  <img src="<%= asset_path "1928786.jpg" %>">
+</section>
 
 <!--
   <header>
@@ -55,7 +37,7 @@
   
 <footer>
   <p>運営会社トリックマーケット</p>
-  <p>© 2117 Copyright Trick Market.</p>
+  <p>© 2017 Copyright Trick Market.</p>
 </footer>
 
 </body>
