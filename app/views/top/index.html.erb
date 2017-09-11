@@ -2,20 +2,20 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Twitterfake</title>
+  <title>Futurestagram</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
 <body>
 
 <div class="col-sm-8" id="tweet_text">
-  <p class="flash"><%= notice %><%= alert %></p>
   <img src="<%= asset_path "image.jpg" %> "width=150%>
  </div>
  
  <br> <br> <br> <br> <br> <br> <br> <br>
     <div class="wrapper col-sm-4" id="tweets">
+          <p class="flash"><%= notice %><%= alert %></p>
      <% if user_signed_in? %>
      <br> <br>
     <li><%= link_to 'マイページ', edit_user_registration_path %></li>
