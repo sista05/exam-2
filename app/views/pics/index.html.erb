@@ -4,6 +4,7 @@
   <div class="row">
     <div class="wrapper col-xs-6 col-sm-4 col-md-4">
       <h5><p><%= image_tag pic.image%></p></h5>
+      <h5><p><%= pic.user.name %></p></h5>
       <h5><p><%= pic.content %></p></h5>
       <%= link_to "編集", edit_pic_path(pic.id), class: 'btn btn-primary btn-success' %>
       <%= link_to "削除", pic_path(pic.id), method: :delete, class:'btn btn-primary btn-success' %>
