@@ -23,7 +23,7 @@ class PicsController < ApplicationController
     @pic = Pic.new(pics_params)
     @pic.user_id = current_user.id
     if @pic.save
-        redirect_to pics_path, notice: "ブログを作成しました!"
+        redirect_to pics_path, notice: "写真を投稿しました!"
         NoticeMailer.sendmail_pic(@pic).deliver
     else
         render action: 'new'
@@ -37,7 +37,7 @@ class PicsController < ApplicationController
   def update
 
     if @pic.update(pics_params)
-      redirect_to pics_path, notice: "ブログを更新しました!"
+      redirect_to pics_path, notice: "写真を更新しました!"
     else
     render action: 'edit'
     end
@@ -46,7 +46,7 @@ class PicsController < ApplicationController
   def destroy
 
     @pic.destroy
-    redirect_to pics_path, notice: "ブログを削除しました!"
+    redirect_to pics_path, notice: "写真を削除しました!"
   end
   
   def show
